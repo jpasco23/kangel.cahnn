@@ -560,9 +560,11 @@ body {
   transform: translateY(-2px);
 }
 
-.tech-badge img {
+.tech-badge img,
+.tech-badge svg {
   width: 20px; height: 20px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
 .tech-badge span {
