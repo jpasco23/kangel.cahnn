@@ -6,7 +6,8 @@
   <title>Kangel Cahnn Baldon Pollescas IT Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,7 +15,7 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <span class="nav-logo">KC<span class="nav-logo-dot">.</span></span>
+      <span class="nav-logo"><span class="nav-logo-bracket">&lt;</span>kangel.dev<span class="nav-logo-bracket">/&gt;</span></span>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -23,6 +24,10 @@
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact" class="nav-cta">Hire Me</a></li>
       </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg class="theme-icon theme-icon--moon" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg class="theme-icon theme-icon--sun" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </button>
       <button class="nav-burger" id="navBurger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -460,7 +465,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
-      <span class="footer-logo">KC<span>.</span></span>
+      <span class="footer-logo"><span class="footer-logo-bracket">&lt;</span>kangel.dev<span class="footer-logo-bracket">/&gt;</span></span>
       <p>Kangel Cahnn Baldon Pollescas &middot; IT Student &middot; <span id="year"></span></p>
       <p class="footer-sub">Open for internship &amp; part-time opportunities</p>
     </div>

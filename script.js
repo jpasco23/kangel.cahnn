@@ -1,3 +1,15 @@
+// Theme toggle
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+themeToggle.addEventListener('click', () => {
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // Nav scroll effect
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
@@ -75,8 +87,9 @@ const sectionObserver = new IntersectionObserver((entries) => {
       });
       const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
       if (active) {
-        active.style.color = '#6366f1';
-        active.style.background = '#eef2ff';
+        const style = getComputedStyle(document.documentElement);
+        active.style.color = style.getPropertyValue('--indigo').trim();
+        active.style.background = style.getPropertyValue('--indigo-lt').trim();
       }
     }
   });
